@@ -1,5 +1,9 @@
 .Home {
-  * {
-    border: solid;
+  display: grid;
+  height: 100vh;
+
+  &__body {
+    margin: 40px auto 0;
+    min-width: 1200px;
   }
 }

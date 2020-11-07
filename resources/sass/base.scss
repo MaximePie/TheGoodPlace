@@ -6,4 +6,10 @@
 @import 'variables';
 
 @import 'Home';
+@import 'Post';
+@import 'Posts';
 @import 'Navbar';
+
+body {
+  margin: 0;
+}

@@ -1,0 +1,39 @@
+.Posts {
+  width: 1200px;
+
+  &__header {
+    text-align: center;
+  }
+
+  &__post {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-column-gap: 8px;
+    cursor: pointer;
+    margin: 24px 0;
+
+    max-height: 200px;
+    overflow: hidden;
+
+    &-illustration {
+      width: 100%;
+    }
+
+    &-title {
+      margin: 0 0 8px;
+    }
+
+    &-description {
+      margin: 8px 0;
+    }
+
+    &-link {
+      all: unset;
+
+      &:visited {
+        all: unset;
+        color: black;
+      }
+    }
+  }
+}

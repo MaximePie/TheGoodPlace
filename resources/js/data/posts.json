@@ -1,0 +1,58 @@
+{
+  "tonkatsu": {
+    "id": 1,
+    "title": "Découvrez le fabuleux tonkatsu !",
+    "description": "Avec un bowl, c'est vraiment très très bon !",
+    "banner": "tonkatsu.jpg"
+  },
+  "tunaPastas": {
+    "id": 2,
+    "title": "Les pâtes au thon",
+    "description": "Quand il fait chaud, c'est vraiment très très bon !",
+    "banner": "tunapasta.jpg"
+  },
+  "emmenagement": {
+    "id": 3,
+    "title": "Déménagement pour The Good Place",
+    "description": "Après de nombreuses épreuves, nous arrivons enfin à emménager chez nous pour faire de cet endroit un petit nid douillet.",
+    "banner": "demenagement.jpg",
+    "sections": [
+      {
+        "title": "Installation du lit",
+        "description": "Pour installer le lit, il fallait être méthodique. Heureusement, Carole avait l'habitude. C'est la meilleure des bricoleuses !",
+        "pictures": ["demenagement1.jpg", "demenagement2.jpg"]
+      },
+      {
+        "title": "Montage du plan de travail",
+        "description": "Les parents de Carole nous ont fait cadeau de la magnifique chute de leur propre plan. Marc est venu nous aider à la fixer, c'est très sympa !",
+        "pictures": ["demenagement3.jpg", "demenagement4.jpg"]
+      }
+    ]
+  },
+  "onigiri": {
+    "id": 4,
+    "title": "Au dîner, des onigiris !",
+    "description": "Aujourd'hui au menu c'est Onigiris. Ces petites boules de riz fourrées au thon sont un en-cas idéal pour se redonner un coup de fouet. Nous réalisons la recette en compagnie de la Chef Carole qui nous révèle ses secrets : \"Plus il y en a, mieux c'est ! Mais attention à ne pas trop les remplir, sinon ils se cassent !\"",
+    "banner": "onigiri.jpg",
+    "sections": [
+      {
+        "title": "L'atelier",
+        "description": "Ici, nous observons le chef Carole qui a accepté de nous montrer la face cachée de sa cuisine que tout le monde aime.",
+        "pictures": ["onigiri1.jpg"]
+      }
+    ]
+  },
+  "lasagnesthon": {
+    "id": 5,
+    "title": "Des lasagnes... au thon !",
+    "description": "Aujourd'hui, nous essayons la super recette de Cyril Lignac des Lasagnes au thon. Servi avec une salade, c'était excellent !",
+    "banner": "lasagnesthon.jpg",
+    "sections": [
+      {
+        "title": "L'atelier",
+        "description": "Aujourd'hui, la chef Carole nous propose de découvrir... le plat de lasagnes déjà préparées ! Et voici comment cela rend dans les assiettes.",
+        "pictures": ["lasagnesthon1.jpg", "lasagnesthon2.jpg", "lasagnesthon3.jpg"]
+      }
+    ]
+  }
+}

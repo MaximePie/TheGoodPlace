@@ -4,7 +4,9 @@ import '../../sass/base.scss';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
 import Navbar from "./molecules/Navbar";
+import Posts from "./pages/Posts";
 import { viewportContext } from '../../contexts/viewport'
+import Post from "./pages/Post";
 
 export default function Home() {
 
@@ -23,21 +25,19 @@ export default function Home() {
     <div className="Home">
       <BrowserRouter history={createBrowserHistory}>
         <Navbar/>
-        <Switch>
-          <Route path='/' exact>
-            Home
-          </Route>
-          <Route path="/path1" exact>
-            <div className="Home__box">
-              First box
-            </div>
-          </Route>
-          <Route path="/path2" exact>
-            <div className="Home__box">
-              Second box
-            </div>
-          </Route>
-        </Switch>
+        <div className="Home__body">
+          <Switch>
+            <Route path='/' exact>
+              Home
+            </Route>
+            <Route path="/posts" exact>
+              <Posts/>
+            </Route>
+            <Route path="/posts/:id">
+              <Post/>
+            </Route>
+          </Switch>
+        </div>
       </BrowserRouter>
     </div>
     </viewportContext.Provider>

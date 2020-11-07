@@ -1,0 +1,62 @@
+.Post {
+  display: grid;
+  grid-template-rows: 400px 80px 1fr;
+  grid-row-gap: 24px;
+  width: 1200px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__banner-container {
+    text-align: center;
+    width: 100%;
+
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__banner {
+    height: 250%;
+    max-width: 100%;
+    position: absolute;
+    top: -80%;
+    left: 0;
+  }
+
+  &__section-illustration-container {
+
+    &--is-displayed {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__section-illustration-background {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.53);
+    height: 100vh;
+    width: 100vw;
+  }
+
+  &__section-illustration {
+    display: block;
+    margin: 16px 0;
+    width: 1200px;
+
+    cursor: pointer;
+
+    &--is-displayed {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 600px;
+      transform: translate(-50%, -50%);
+
+    }
+  }
+
+}
