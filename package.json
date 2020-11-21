@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
+    "js-cookie": "^2.2.1",
     "react-simple-image-viewer": "0.0.7"
   }
 }

@@ -1,12 +1,18 @@
 import React, {useCallback, useState} from 'react';
 import {useParams} from "react-router";
-import postsList from '../../data/posts.json';
 import ImageViewer from 'react-simple-image-viewer';
+import server from "../../server";
 
 export default function Post({}) {
 
-  const {id} = useParams();
-  const {id: postId, banner, title, description, sections} = Object.values(postsList).find(post => post.id == id);
+  const {id: postId} = useParams();
+
+  const [post, setPost] = React.useState({});
+
+  React.useEffect(() => {
+    console.log(postId);
+    fetchPost();
+  }, [postId]);
 
   const picturesList = picturesFromData();
 
@@ -22,28 +28,25 @@ export default function Post({}) {
     setIsViewerOpen(false);
   };
 
-  console.log(picturesList);
-
   return (
     <div className="Post">
       <div className="Post__banner-container">
-        <img src={`/../../images/${banner}`} alt="Bannière" className="Post__banner"/>
+        <img src={`/../../images/${post.banner}`} alt="Bannière" className="Post__banner"/>
       </div>
-      <h1 className="Post__title">{title}</h1>
-      <p>{description}</p>
-      {sections?.map(section => (
+      <h1 className="Post__title">{post.title}</h1>
+      <p>{post.description}</p>
+      {post.sections?.map(section => (
         <div>
           <h2>{section.title}</h2>
           <p>{section.description}</p>
-          {section.pictures?.map(picture => {
-            const index = picturesList.indexOf('/../../images/' + picture);
-            console.log(index);
+          {section.images?.map(picture => {
+            const index = picturesList.indexOf('/../../images/' + picture.name);
             return (
               <img
                 className={'Post__section-illustration'}
-                src={`/../../images/${picture}`}
-                alt={picture}
-                onClick={ () => openImageViewer(index) }
+                src={`/../../images/${picture.name}`}
+                alt={picture.name}
+                onClick={() => openImageViewer(index)}
               />
             )
           })}
@@ -66,14 +69,28 @@ export default function Post({}) {
   function picturesFromData() {
     const pictures = [];
 
-    pictures.push('/../../images/' + banner);
+    pictures.push('/../../images/' + post.banner);
 
-    sections?.forEach(section => {
-      section.pictures?.forEach(picture => {
-        pictures.push('/../../images/' + picture);
+    post.sections?.forEach(section => {
+      section.images?.forEach(picture => {
+        pictures.push('/../../images/' + picture.name);
       })
     });
 
     return pictures;
+  }
+
+  /**
+   * Fetch the Post and set it
+   */
+  function fetchPost() {
+    if (postId) {
+      server.get(`post/${postId}`).then((response) => {
+        const {post} = response.data;
+        if (post) {
+          setPost(post)
+        }
+      })
+    }
   }
 }
