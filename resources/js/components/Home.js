@@ -7,6 +7,7 @@ import Navbar from "./molecules/Navbar";
 import Posts from "./pages/Posts";
 import { viewportContext } from '../../contexts/viewport'
 import Post from "./pages/Post";
+import CreatePost from "./pages/CreatePost";
 
 export default function Home() {
 
@@ -32,6 +33,9 @@ export default function Home() {
             </Route>
             <Route path="/posts" exact>
               <Posts/>
+            </Route>
+            <Route path="/createPost" exact>
+              <CreatePost/>
             </Route>
             <Route path="/posts/:id">
               <Post/>

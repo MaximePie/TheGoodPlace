@@ -6718,7 +6718,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Nun
 exports.i(__webpack_require__(/*! -!../../node_modules/css-loader!../../node_modules/@fortawesome/fontawesome-free/css/all.min.css */ "./node_modules/css-loader/index.js!./node_modules/@fortawesome/fontawesome-free/css/all.min.css"), "");
 
 // module
-exports.push([module.i, ".Home {\n  display: grid;\n  height: 100vh;\n}\n.Home__body {\n  margin: 40px auto 0;\n  min-width: 1200px;\n}\n\n.Post {\n  display: grid;\n  grid-template-rows: 400px 80px 1fr;\n  grid-row-gap: 24px;\n  width: 1200px;\n}\n.Post__title {\n  text-align: center;\n}\n.Post__banner-container {\n  text-align: center;\n  width: 100%;\n  position: relative;\n  overflow: hidden;\n}\n.Post__banner {\n  height: 250%;\n  max-width: 100%;\n  position: absolute;\n  top: -80%;\n  left: 0;\n}\n.Post__section-illustration-container--is-displayed {\n  width: 100vw;\n  height: 100vh;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.Post__section-illustration-background {\n  display: block;\n  background-color: rgba(255, 255, 255, 0.53);\n  height: 100vh;\n  width: 100vw;\n}\n.Post__section-illustration {\n  display: block;\n  margin: 16px 0;\n  width: 1200px;\n  cursor: pointer;\n}\n.Post__section-illustration--is-displayed {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 600px;\n  transform: translate(-50%, -50%);\n}\n\n.Posts {\n  width: 1200px;\n}\n.Posts__header {\n  text-align: center;\n}\n.Posts__post {\n  display: grid;\n  grid-template-columns: 250px 1fr;\n  grid-column-gap: 8px;\n  cursor: pointer;\n  margin: 24px 0;\n  max-height: 200px;\n  overflow: hidden;\n}\n.Posts__post-illustration {\n  width: 100%;\n}\n.Posts__post-title {\n  margin: 0 0 8px;\n}\n.Posts__post-description {\n  margin: 8px 0;\n}\n.Posts__post-link {\n  all: unset;\n}\n.Posts__post-link:visited {\n  all: unset;\n  color: black;\n}\n\n.Navbar {\n  margin-top: 1em;\n  position: fixed;\n  top: 0;\n}\n.Navbar__link {\n  margin: 1em;\n}\n\nbody {\n  margin: 0;\n}", ""]);
+exports.push([module.i, ".Home {\n  display: grid;\n  height: 100vh;\n}\n.Home__body {\n  margin: 40px auto 0;\n  min-width: 1200px;\n}\n\n.Post {\n  display: grid;\n  grid-template-rows: 400px 80px 1fr;\n  grid-row-gap: 24px;\n  width: 1200px;\n}\n.Post__title {\n  text-align: center;\n}\n.Post__banner-container {\n  text-align: center;\n  width: 100%;\n  position: relative;\n  overflow: hidden;\n}\n.Post__banner {\n  height: 250%;\n  max-width: 100%;\n  position: absolute;\n  top: -80%;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.Post__section-illustration-container--is-displayed {\n  width: 100vw;\n  height: 100vh;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.Post__section-illustration-background {\n  display: block;\n  background-color: rgba(255, 255, 255, 0.53);\n  height: 100vh;\n  width: 100vw;\n}\n.Post__section-illustration {\n  display: block;\n  margin: 16px 0;\n  width: 1200px;\n  cursor: pointer;\n}\n.Post__section-illustration--is-displayed {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 600px;\n  transform: translate(-50%, -50%);\n}\n\n.Posts {\n  width: 1200px;\n}\n.Posts__header {\n  text-align: center;\n}\n.Posts__post {\n  display: grid;\n  grid-template-columns: 250px 1fr;\n  grid-column-gap: 8px;\n  cursor: pointer;\n  margin: 24px 0;\n  max-height: 200px;\n  overflow: hidden;\n}\n.Posts__post-illustration {\n  width: 100%;\n}\n.Posts__post-title {\n  margin: 0 0 8px;\n}\n.Posts__post-description {\n  margin: 8px 0;\n}\n.Posts__post-link {\n  all: unset;\n}\n.Posts__post-link:visited {\n  all: unset;\n  color: black;\n}\n\n.Navbar {\n  margin-top: 1em;\n  position: fixed;\n  top: 0;\n}\n.Navbar__link {\n  margin: 1em;\n}\n\n.CreatePost__section {\n  border-bottom: 1px #c6c6c6 solid;\n  padding: 8px 0;\n  margin: 8px 0;\n}\n\nbody {\n  margin: 0;\n}", ""]);
 
 // exports
 
@@ -76093,6 +76093,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_Posts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/Posts */ "./resources/js/components/pages/Posts.jsx");
 /* harmony import */ var _contexts_viewport__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../contexts/viewport */ "./resources/contexts/viewport.js");
 /* harmony import */ var _pages_Post__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/Post */ "./resources/js/components/pages/Post.jsx");
+/* harmony import */ var _pages_CreatePost__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./pages/CreatePost */ "./resources/js/components/pages/CreatePost.jsx");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -76104,6 +76105,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -76142,6 +76144,9 @@ function Home() {
     path: "/posts",
     exact: true
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pages_Posts__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
+    path: "/createPost",
+    exact: true
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pages_CreatePost__WEBPACK_IMPORTED_MODULE_9__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_3__["Route"], {
     path: "/posts/:id"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pages_Post__WEBPACK_IMPORTED_MODULE_8__["default"], null)))))));
 }
@@ -76180,6 +76185,308 @@ function Navbar(props) {
     to: "/posts",
     className: "Navbar__link"
   }, "Articles"));
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/pages/CreatePost.jsx":
+/*!******************************************************!*\
+  !*** ./resources/js/components/pages/CreatePost.jsx ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CreatePost; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _server__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../server */ "./resources/js/server.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure undefined"); }
+
+
+
+function CreatePost(_ref) {
+  var _form$sections;
+
+  _objectDestructuringEmpty(_ref);
+
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState({
+    title: "Haha",
+    description: "Haha",
+    banner: "",
+    sections: [{
+      title: "First section",
+      description: "First desc",
+      order: 1
+    }, {
+      title: "Second section",
+      description: "Second desc",
+      order: 2
+    }]
+  }),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      form = _React$useState2[0],
+      setForm = _React$useState2[1];
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "CreatePost"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Cr\xE9ez votre propre article"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    action: ""
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    value: form.title,
+    onChange: function onChange(event) {
+      updateForm(event.target.value, 'title');
+    },
+    type: "text",
+    placeholder: "Titre"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    value: form.description,
+    onChange: function onChange(event) {
+      updateForm(event.target.value, 'description');
+    },
+    type: "text",
+    placeholder: "Description"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Bani\xE8re"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "file",
+    onChange: function onChange(event) {
+      updateForm(event.target.files[0], 'banner');
+    }
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick(event) {
+      return addSection(event);
+    }
+  }, "Cr\xE9er nouvelle section")), (_form$sections = form.sections) === null || _form$sections === void 0 ? void 0 : _form$sections.map(function (section) {
+    var _section$images;
+
+    console.log(section);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "CreatePost__section"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Titre"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "text",
+      value: section.title,
+      onChange: function onChange(event) {
+        return updateSection('title', event.target.value, section.order);
+      },
+      placeholder: "Titre de la section ".concat(section.order)
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Description"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "text",
+      value: section.description,
+      onChange: function onChange(event) {
+        return updateSection('description', event.target.value, section.order);
+      },
+      placeholder: "Description de la section ".concat(section.order)
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Ordre"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      type: "text",
+      value: section.order,
+      onChange: function onChange(event) {
+        return updateSection('order', event.target.value, section.order);
+      },
+      placeholder: "Ordre de la section ".concat(section.order)
+    })), (_section$images = section.images) === null || _section$images === void 0 ? void 0 : _section$images.map(function (image, index) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Image"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "file",
+        onChange: function onChange(event) {
+          updateImages(section.order, index, event.target.files[0]);
+        }
+      }));
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: function onClick(event) {
+        return addImageToSection(section.order, event);
+      }
+    }, "Ajouter une image"));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: createPost
+  }, "Cr\xE9er"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, Object.entries(form).map(function (_ref2) {
+    var _ref3 = _slicedToArray(_ref2, 2),
+        key = _ref3[0],
+        value = _ref3[1];
+
+    if (key === 'sections') {
+      return form.sections.map(function (section) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, section.title, " : ", section.description, " : ", section.order);
+      });
+    } else if (key !== 'banner') {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, key, " : ", value);
+    }
+  })));
+  /**
+   * Updates the form with the given informations
+   * @param newValue The value to append to the form
+   * @param field The field we want to modify
+   */
+
+  function updateForm(newValue, field) {
+    setForm(_objectSpread(_objectSpread({}, form), {}, _defineProperty({}, field, newValue)));
+  }
+  /**
+   * Adds a section on the form
+   */
+
+
+  function addSection(event) {
+    event.preventDefault();
+    var sectionArray = form.sections || [];
+    var order = 1;
+
+    if (form.sections) {
+      var ordersList = form.sections.map(function (o) {
+        return o['order'];
+      });
+      order = ordersList.reduce(function (accumulator, currentValue) {
+        return Math.max(accumulator, currentValue);
+      }) + 1;
+    }
+
+    sectionArray.push({
+      title: 'section',
+      description: 'description',
+      order: order || 1,
+      images: []
+    });
+    updateForm(sectionArray, 'sections');
+  }
+  /**
+   * Add an image spot to a section
+   */
+
+
+  function addImageToSection(sectionOrder, event) {
+    event.preventDefault(); // Find the section to add an image to
+
+    var currentSection = form.sections.find(function (section) {
+      return section.order === sectionOrder;
+    }); // Get the images array of this section
+
+    var currentImages = currentSection.images ? _toConsumableArray(currentSection.images) : []; // Push the image spot
+
+    currentImages.push(null); // Update the section
+
+    updateSection('images', currentImages, sectionOrder);
+  }
+  /**
+   * Updates the given section with a new value
+   */
+
+
+  function updateSection(field, newValue, sectionOrder) {
+    // Set the current section value
+    var currentSection = form.sections.find(function (section) {
+      return section.order === sectionOrder;
+    }); // Create the new current Section
+
+    var updatedSection = _objectSpread(_objectSpread({}, currentSection), {}, _defineProperty({}, field, newValue)); // Insert it in the array of sections
+
+
+    var indexOfCurrentSection = form.sections.indexOf(currentSection);
+
+    var updatedSectionsArray = _toConsumableArray(form.sections);
+
+    updatedSectionsArray[indexOfCurrentSection] = updatedSection;
+    updateForm(updatedSectionsArray, 'sections');
+  }
+  /**
+   * Updates the array of the images of the given section
+   */
+
+
+  function updateImages(sectionOrder, imageIndex, file) {
+    // Get the current section
+    var currentSection = form.sections.find(function (section) {
+      return section.order === sectionOrder;
+    }); // Get the current image array
+
+    var imagesArray = _toConsumableArray(currentSection.images); // Set the current image at given index
+
+
+    imagesArray[imageIndex] = file; // Update form
+
+    updateSection('images', imagesArray, sectionOrder);
+  }
+  /**
+   * Send all data to the server
+   */
+
+
+  function createPost() {
+    _server__WEBPACK_IMPORTED_MODULE_1__["default"].post('post', {
+      'title': form.title,
+      'description': form.description,
+      'sections': [{
+        'title': 'Titre de section 2',
+        'description': 'Description de section 2',
+        'order': 2 // 'images': ['demenagement1.jpg', 'demenagement2.jpg'],
+
+      }, {
+        'title': 'Titre de section 1',
+        'description': 'Description de section 1',
+        'order': 1
+      }]
+    }).then(function (response) {
+      var _post$sections;
+
+      var post = response.data.post;
+      console.log(post);
+      (_post$sections = post.sections) === null || _post$sections === void 0 ? void 0 : _post$sections.forEach(function (section) {
+        var _sectionImages$images;
+
+        console.log(1); // Find the images for the corresponding section
+
+        var sectionImages = form.sections.find(function (formSection) {
+          return section.order === formSection.order;
+        });
+        (_sectionImages$images = sectionImages.images) === null || _sectionImages$images === void 0 ? void 0 : _sectionImages$images.forEach(function (image) {
+          console.log(2);
+          createImage(image, section.title, section.id, 'sectionImage');
+        });
+      });
+
+      if (form.banner) {
+        createImage(form.banner, form.title, post.id, 'banner');
+      }
+    });
+  }
+  /**
+   * Creates an image and assign it to its parent
+   */
+
+
+  function createImage(file, fileName, parentId, type) {
+    var data = new FormData();
+    data.append('file', file);
+    data.append('name', fileName);
+    data.append('type', type);
+    data.append('parentId', parentId);
+    _server__WEBPACK_IMPORTED_MODULE_1__["default"].post('post/image', data).then(function (response) {
+      setForm({});
+    });
+  }
 }
 
 /***/ }),
@@ -76232,7 +76539,6 @@ function Post(_ref) {
       setPost = _React$useState2[1];
 
   react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(function () {
-    console.log(postId);
     fetchPost();
   }, [postId]);
   var picturesList = picturesFromData();
@@ -76262,7 +76568,7 @@ function Post(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Post__banner-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/../../images/".concat(post.banner),
+    src: "/storage/".concat(post.banner),
     alt: "Banni\xE8re",
     className: "Post__banner"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
@@ -76271,10 +76577,10 @@ function Post(_ref) {
     var _section$images;
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, section.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, section.description), (_section$images = section.images) === null || _section$images === void 0 ? void 0 : _section$images.map(function (picture) {
-      var index = picturesList.indexOf('/../../images/' + picture.name);
+      var index = picturesList.indexOf("/storage/".concat(picture.name));
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: 'Post__section-illustration',
-        src: "/../../images/".concat(picture.name),
+        src: "/storage/".concat(picture.name),
         alt: picture.name,
         onClick: function onClick() {
           return openImageViewer(index);
@@ -76294,12 +76600,12 @@ function Post(_ref) {
     var _post$sections2;
 
     var pictures = [];
-    pictures.push('/../../images/' + post.banner);
+    pictures.push("/storage/".concat(post.banner));
     (_post$sections2 = post.sections) === null || _post$sections2 === void 0 ? void 0 : _post$sections2.forEach(function (section) {
       var _section$images2;
 
       (_section$images2 = section.images) === null || _section$images2 === void 0 ? void 0 : _section$images2.forEach(function (picture) {
-        pictures.push('/../../images/' + picture.name);
+        pictures.push("/storage/".concat(picture.name));
       });
     });
     return pictures;
@@ -76337,9 +76643,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _data_posts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../data/posts */ "./resources/js/data/posts.json");
-var _data_posts__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../data/posts */ "./resources/js/data/posts.json", 1);
-/* harmony import */ var _server__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../server */ "./resources/js/server.js");
+/* harmony import */ var _server__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../server */ "./resources/js/server.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -76357,11 +76661,9 @@ function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("
 
 
 
-
 function Posts(_ref) {
   _objectDestructuringEmpty(_ref);
 
-  // const postsList = Object.values(postsData);
   var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState([]),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       posts = _React$useState2[0],
@@ -76379,7 +76681,7 @@ function Posts(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "Posts__post"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: "/../../images/".concat(post.banner),
+      src: "/storage/".concat(post.banner),
       alt: "",
       className: "Posts__post-illustration"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -76389,7 +76691,8 @@ function Posts(_ref) {
     }, post.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
       className: "Posts__post-description"
     }, post.description))));
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+    to: '/createPost',
     onClick: createPost
   }, "Cr\xE9er un article")));
   /**
@@ -76397,7 +76700,7 @@ function Posts(_ref) {
    */
 
   function fetchPosts() {
-    _server__WEBPACK_IMPORTED_MODULE_3__["default"].get('posts').then(function (response) {
+    _server__WEBPACK_IMPORTED_MODULE_2__["default"].get('posts').then(function (response) {
       var posts = response.data.posts;
 
       if (posts) {
@@ -76411,7 +76714,7 @@ function Posts(_ref) {
 
 
   function createPost() {
-    _server__WEBPACK_IMPORTED_MODULE_3__["default"].post('post', {
+    _server__WEBPACK_IMPORTED_MODULE_2__["default"].post('post', {
       'title': 'Mon titre',
       'description': 'Ma description',
       'banner': 'demenagement.jpg',
@@ -76431,17 +76734,6 @@ function Posts(_ref) {
     });
   }
 }
-
-/***/ }),
-
-/***/ "./resources/js/data/posts.json":
-/*!**************************************!*\
-  !*** ./resources/js/data/posts.json ***!
-  \**************************************/
-/*! exports provided: tonkatsu, tunaPastas, emmenagement, onigiri, lasagnesthon, default */
-/***/ (function(module) {
-
-module.exports = JSON.parse("{\"tonkatsu\":{\"id\":1,\"title\":\"Découvrez le fabuleux tonkatsu !\",\"description\":\"Avec un bowl, c'est vraiment très très bon !\",\"banner\":\"tonkatsu.jpg\"},\"tunaPastas\":{\"id\":2,\"title\":\"Les pâtes au thon\",\"description\":\"Quand il fait chaud, c'est vraiment très très bon !\",\"banner\":\"tunapasta.jpg\"},\"emmenagement\":{\"id\":3,\"title\":\"Déménagement pour The Good Place\",\"description\":\"Après de nombreuses épreuves, nous arrivons enfin à emménager chez nous pour faire de cet endroit un petit nid douillet.\",\"banner\":\"demenagement.jpg\",\"sections\":[{\"title\":\"Installation du lit\",\"description\":\"Pour installer le lit, il fallait être méthodique. Heureusement, Carole avait l'habitude. C'est la meilleure des bricoleuses !\",\"pictures\":[\"demenagement1.jpg\",\"demenagement2.jpg\"]},{\"title\":\"Montage du plan de travail\",\"description\":\"Les parents de Carole nous ont fait cadeau de la magnifique chute de leur propre plan. Marc est venu nous aider à la fixer, c'est très sympa !\",\"pictures\":[\"demenagement3.jpg\",\"demenagement4.jpg\"]}]},\"onigiri\":{\"id\":4,\"title\":\"Au dîner, des onigiris !\",\"description\":\"Aujourd'hui au menu c'est Onigiris. Ces petites boules de riz fourrées au thon sont un en-cas idéal pour se redonner un coup de fouet. Nous réalisons la recette en compagnie de la Chef Carole qui nous révèle ses secrets : \\\"Plus il y en a, mieux c'est ! Mais attention à ne pas trop les remplir, sinon ils se cassent !\\\"\",\"banner\":\"onigiri.jpg\",\"sections\":[{\"title\":\"L'atelier\",\"description\":\"Ici, nous observons le chef Carole qui a accepté de nous montrer la face cachée de sa cuisine que tout le monde aime.\",\"pictures\":[\"onigiri1.jpg\"]}]},\"lasagnesthon\":{\"id\":5,\"title\":\"Des lasagnes... au thon !\",\"description\":\"Aujourd'hui, nous essayons la super recette de Cyril Lignac des Lasagnes au thon. Servi avec une salade, c'était excellent !\",\"banner\":\"lasagnesthon.jpg\",\"sections\":[{\"title\":\"L'atelier\",\"description\":\"Aujourd'hui, la chef Carole nous propose de découvrir... le plat de lasagnes déjà préparées ! Et voici comment cela rend dans les assiettes.\",\"pictures\":[\"lasagnesthon1.jpg\",\"lasagnesthon2.jpg\",\"lasagnesthon3.jpg\"]}]}}");
 
 /***/ }),
 

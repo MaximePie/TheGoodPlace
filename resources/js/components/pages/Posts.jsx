@@ -1,11 +1,9 @@
 import React, {useEffect} from 'react';
 import {Link} from "react-router-dom";
-import postsData from '../../data/posts'
 import server from "../../server";
 
 export default function Posts({}) {
 
-  // const postsList = Object.values(postsData);
   const [posts, setPosts] = React.useState([]);
 
   useEffect(fetchPosts, []);
@@ -16,7 +14,7 @@ export default function Posts({}) {
       {posts.map(post => (
         <Link to={`/posts/${post.id}`} className="Posts__post-link">
           <div className="Posts__post">
-            <img src={`/../../images/${post.banner}`} alt="" className="Posts__post-illustration"/>
+            <img src={`/storage/${post.banner}`} alt="" className="Posts__post-illustration"/>
             <div className="Posts__post-details">
               <h2 className="Posts__post-title">{post.title}</h2>
               <p className="Posts__post-description">{post.description}</p>
@@ -25,7 +23,7 @@ export default function Posts({}) {
         </Link>
       ))}
       <div>
-        <button onClick={createPost}>Créer un article</button>
+        <Link to={'/createPost'} onClick={createPost}>Créer un article</Link>
       </div>
     </div>
   );

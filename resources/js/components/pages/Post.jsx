@@ -10,7 +10,6 @@ export default function Post({}) {
   const [post, setPost] = React.useState({});
 
   React.useEffect(() => {
-    console.log(postId);
     fetchPost();
   }, [postId]);
 
@@ -31,7 +30,7 @@ export default function Post({}) {
   return (
     <div className="Post">
       <div className="Post__banner-container">
-        <img src={`/../../images/${post.banner}`} alt="Bannière" className="Post__banner"/>
+        <img src={`/storage/${post.banner}`} alt="Bannière" className="Post__banner"/>
       </div>
       <h1 className="Post__title">{post.title}</h1>
       <p>{post.description}</p>
@@ -40,11 +39,11 @@ export default function Post({}) {
           <h2>{section.title}</h2>
           <p>{section.description}</p>
           {section.images?.map(picture => {
-            const index = picturesList.indexOf('/../../images/' + picture.name);
+            const index = picturesList.indexOf(`/storage/${picture.name}`);
             return (
               <img
                 className={'Post__section-illustration'}
-                src={`/../../images/${picture.name}`}
+                src={`/storage/${picture.name}`}
                 alt={picture.name}
                 onClick={() => openImageViewer(index)}
               />
@@ -69,11 +68,11 @@ export default function Post({}) {
   function picturesFromData() {
     const pictures = [];
 
-    pictures.push('/../../images/' + post.banner);
+    pictures.push(`/storage/${post.banner}`);
 
     post.sections?.forEach(section => {
       section.images?.forEach(picture => {
-        pictures.push('/../../images/' + picture.name);
+        pictures.push(`/storage/${picture.name}`);
       })
     });
 
