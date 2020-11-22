@@ -76438,16 +76438,7 @@ function CreatePost(_ref) {
     _server__WEBPACK_IMPORTED_MODULE_1__["default"].post('post', {
       'title': form.title,
       'description': form.description,
-      'sections': [{
-        'title': 'Titre de section 2',
-        'description': 'Description de section 2',
-        'order': 2 // 'images': ['demenagement1.jpg', 'demenagement2.jpg'],
-
-      }, {
-        'title': 'Titre de section 1',
-        'description': 'Description de section 1',
-        'order': 1
-      }]
+      'sections': form.sections
     }).then(function (response) {
       var _post$sections;
 
@@ -76456,13 +76447,11 @@ function CreatePost(_ref) {
       (_post$sections = post.sections) === null || _post$sections === void 0 ? void 0 : _post$sections.forEach(function (section) {
         var _sectionImages$images;
 
-        console.log(1); // Find the images for the corresponding section
-
+        // Find the images for the corresponding section
         var sectionImages = form.sections.find(function (formSection) {
           return section.order === formSection.order;
         });
         (_sectionImages$images = sectionImages.images) === null || _sectionImages$images === void 0 ? void 0 : _sectionImages$images.forEach(function (image) {
-          console.log(2);
           createImage(image, section.title, section.id, 'sectionImage');
         });
       });
@@ -76568,7 +76557,7 @@ function Post(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Post__banner-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "/storage/".concat(post.banner),
+    src: post.banner,
     alt: "Banni\xE8re",
     className: "Post__banner"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
@@ -76577,10 +76566,10 @@ function Post(_ref) {
     var _section$images;
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, section.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, section.description), (_section$images = section.images) === null || _section$images === void 0 ? void 0 : _section$images.map(function (picture) {
-      var index = picturesList.indexOf("/storage/".concat(picture.name));
+      var index = picturesList.indexOf(picture.name);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: 'Post__section-illustration',
-        src: "/storage/".concat(picture.name),
+        src: picture.name,
         alt: picture.name,
         onClick: function onClick() {
           return openImageViewer(index);
@@ -76600,12 +76589,12 @@ function Post(_ref) {
     var _post$sections2;
 
     var pictures = [];
-    pictures.push("/storage/".concat(post.banner));
+    pictures.push(post.banner);
     (_post$sections2 = post.sections) === null || _post$sections2 === void 0 ? void 0 : _post$sections2.forEach(function (section) {
       var _section$images2;
 
       (_section$images2 = section.images) === null || _section$images2 === void 0 ? void 0 : _section$images2.forEach(function (picture) {
-        pictures.push("/storage/".concat(picture.name));
+        pictures.push(picture.name);
       });
     });
     return pictures;
@@ -76681,7 +76670,7 @@ function Posts(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "Posts__post"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-      src: "/storage/".concat(post.banner),
+      src: post.banner,
       alt: "",
       className: "Posts__post-illustration"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -76692,8 +76681,7 @@ function Posts(_ref) {
       className: "Posts__post-description"
     }, post.description))));
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-    to: '/createPost',
-    onClick: createPost
+    to: '/createPost'
   }, "Cr\xE9er un article")));
   /**
    * Fetch the Posts and set it

@@ -202,31 +202,17 @@ export default function CreatePost({}) {
     server.post('post', {
       'title': form.title,
       'description': form.description,
-      'sections': [
-        {
-          'title': 'Titre de section 2',
-          'description': 'Description de section 2',
-          'order': 2,
-          // 'images': ['demenagement1.jpg', 'demenagement2.jpg'],
-        },
-        {
-          'title': 'Titre de section 1',
-          'description': 'Description de section 1',
-          'order': 1,
-        },
-      ]
+      'sections': form.sections,
     }).then((response) => {
       const post = response.data.post;
 
       console.log(post);
       post.sections?.forEach(section => {
-        console.log(1);
 
         // Find the images for the corresponding section
         const sectionImages = form.sections.find(formSection => section.order === formSection.order);
 
         sectionImages.images?.forEach(image => {
-          console.log(2);
           createImage(image, section.title, section.id, 'sectionImage');
         });
       })

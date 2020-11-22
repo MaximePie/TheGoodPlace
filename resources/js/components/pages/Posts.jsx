@@ -14,7 +14,7 @@ export default function Posts({}) {
       {posts.map(post => (
         <Link to={`/posts/${post.id}`} className="Posts__post-link">
           <div className="Posts__post">
-            <img src={`/storage/${post.banner}`} alt="" className="Posts__post-illustration"/>
+            <img src={post.banner} alt="" className="Posts__post-illustration"/>
             <div className="Posts__post-details">
               <h2 className="Posts__post-title">{post.title}</h2>
               <p className="Posts__post-description">{post.description}</p>
@@ -23,7 +23,7 @@ export default function Posts({}) {
         </Link>
       ))}
       <div>
-        <Link to={'/createPost'} onClick={createPost}>Créer un article</Link>
+        <Link to={'/createPost'}>Créer un article</Link>
       </div>
     </div>
   );

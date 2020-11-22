@@ -30,7 +30,7 @@ export default function Post({}) {
   return (
     <div className="Post">
       <div className="Post__banner-container">
-        <img src={`/storage/${post.banner}`} alt="Bannière" className="Post__banner"/>
+        <img src={post.banner} alt="Bannière" className="Post__banner"/>
       </div>
       <h1 className="Post__title">{post.title}</h1>
       <p>{post.description}</p>
@@ -39,11 +39,11 @@ export default function Post({}) {
           <h2>{section.title}</h2>
           <p>{section.description}</p>
           {section.images?.map(picture => {
-            const index = picturesList.indexOf(`/storage/${picture.name}`);
+            const index = picturesList.indexOf(picture.name);
             return (
               <img
                 className={'Post__section-illustration'}
-                src={`/storage/${picture.name}`}
+                src={picture.name}
                 alt={picture.name}
                 onClick={() => openImageViewer(index)}
               />
@@ -68,11 +68,11 @@ export default function Post({}) {
   function picturesFromData() {
     const pictures = [];
 
-    pictures.push(`/storage/${post.banner}`);
+    pictures.push(post.banner);
 
     post.sections?.forEach(section => {
       section.images?.forEach(picture => {
-        pictures.push(`/storage/${picture.name}`);
+        pictures.push(picture.name);
       })
     });
 

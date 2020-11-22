@@ -8,6 +8,7 @@ use App\Section;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -18,6 +19,7 @@ class PostController extends Controller
    */
   public function index()
   {
+    $posts = Post::all();
     return response()->json(['posts' => Post::all()]);
   }
 
@@ -63,17 +65,15 @@ class PostController extends Controller
   }
 
   public function storeImage(Request $request) {
-    $path = $request->file('file')->store(
-      'images',  ['disk' => 'public']
-    );
+    $path = $request->file('file')->store('images', 's3');
     if ($request->type === 'banner') {
       $post = Post::findOrFail($request->parentId);
-      $post->banner = $path;
+      $post->banner = Storage::disk('s3')->url($path);
       $post->save();
-      return $post;
+      return response()->json(['post' => $post, 'path' => Storage::disk('s3')->url($path)]);
     }
     else {
-      return Image::create(['name' => $path, 'section_id' => $request->parentId] );
+      return Image::create(['name' => Storage::disk('s3')->url($path), 'section_id' => $request->parentId] );
     }
   }
 
