@@ -6718,7 +6718,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Nun
 exports.i(__webpack_require__(/*! -!../../node_modules/css-loader!../../node_modules/@fortawesome/fontawesome-free/css/all.min.css */ "./node_modules/css-loader/index.js!./node_modules/@fortawesome/fontawesome-free/css/all.min.css"), "");
 
 // module
-exports.push([module.i, ".Home {\n  display: grid;\n  height: 100vh;\n}\n.Home__body {\n  margin: 40px auto 0;\n  min-width: 1200px;\n}\n\n.Post {\n  display: grid;\n  grid-template-rows: 400px 80px 1fr;\n  grid-row-gap: 24px;\n  width: 1200px;\n}\n.Post__title {\n  text-align: center;\n}\n.Post__banner-container {\n  text-align: center;\n  width: 100%;\n  position: relative;\n  overflow: hidden;\n}\n.Post__banner {\n  height: 250%;\n  max-width: 100%;\n  position: absolute;\n  top: -80%;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.Post__section-illustration-container--is-displayed {\n  width: 100vw;\n  height: 100vh;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.Post__section-illustration-background {\n  display: block;\n  background-color: rgba(255, 255, 255, 0.53);\n  height: 100vh;\n  width: 100vw;\n}\n.Post__section-illustration {\n  display: block;\n  margin: 16px 0;\n  width: 1200px;\n  cursor: pointer;\n}\n.Post__section-illustration--is-displayed {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 600px;\n  transform: translate(-50%, -50%);\n}\n\n.Posts {\n  width: 1200px;\n}\n.Posts__header {\n  text-align: center;\n}\n.Posts__post {\n  display: grid;\n  grid-template-columns: 250px 1fr;\n  grid-column-gap: 8px;\n  cursor: pointer;\n  margin: 24px 0;\n  max-height: 200px;\n  overflow: hidden;\n}\n.Posts__post-illustration {\n  width: 100%;\n}\n.Posts__post-title {\n  margin: 0 0 8px;\n}\n.Posts__post-description {\n  margin: 8px 0;\n}\n.Posts__post-link {\n  all: unset;\n}\n.Posts__post-link:visited {\n  all: unset;\n  color: black;\n}\n\n.Navbar {\n  margin-top: 1em;\n  position: fixed;\n  top: 0;\n}\n.Navbar__link {\n  margin: 1em;\n}\n\n.CreatePost__section {\n  border-bottom: 1px #c6c6c6 solid;\n  padding: 8px 0;\n  margin: 8px 0;\n}\n\nbody {\n  margin: 0;\n}", ""]);
+exports.push([module.i, ".Home {\n  display: grid;\n  height: 100vh;\n}\n.Home__body {\n  margin: 40px auto 0;\n  min-width: 1200px;\n}\n\n.Post {\n  display: grid;\n  grid-template-rows: 400px 80px 1fr;\n  grid-row-gap: 24px;\n  width: 1200px;\n}\n.Post__title {\n  text-align: center;\n}\n.Post__banner-container {\n  text-align: center;\n  width: 100%;\n  position: relative;\n  overflow: hidden;\n}\n.Post__banner {\n  height: 250%;\n  max-width: 100%;\n  position: absolute;\n  top: -80%;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.Post__section-illustration-container--is-displayed {\n  width: 100vw;\n  height: 100vh;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.Post__section-illustration-background {\n  display: block;\n  background-color: rgba(255, 255, 255, 0.53);\n  height: 100vh;\n  width: 100vw;\n}\n.Post__section-illustration {\n  display: block;\n  margin: 16px 0;\n  width: 1200px;\n  cursor: pointer;\n}\n.Post__section-illustration--is-displayed {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 600px;\n  transform: translate(-50%, -50%);\n}\n\n.Posts {\n  width: 1200px;\n}\n.Posts__header {\n  text-align: center;\n}\n.Posts__post {\n  display: grid;\n  grid-template-columns: 250px 1fr;\n  grid-column-gap: 8px;\n  cursor: pointer;\n  margin: 24px 0;\n  border-radius: 4px;\n  max-height: 200px;\n  overflow: hidden;\n  transition: box-shadow 250ms ease;\n}\n.Posts__post:hover {\n  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\n  transition: box-shadow 250ms ease;\n}\n.Posts__post-illustration {\n  width: 100%;\n}\n.Posts__post-title {\n  margin: 0 0 8px;\n}\n.Posts__post-description {\n  margin: 8px 0;\n}\n.Posts__post-link {\n  all: unset;\n}\n.Posts__post-link:visited {\n  all: unset;\n  color: black;\n}\n\n.Navbar {\n  margin-top: 1em;\n  position: fixed;\n  top: 0;\n}\n.Navbar__link {\n  margin: 1em;\n}\n\n.CreatePost__title {\n  outline: none;\n  border: none;\n  font-size: 3em;\n  width: 100%;\n  border-bottom: 1px solid lightgrey;\n}\n.CreatePost__title:focus {\n  border-bottom: 1px solid cornflowerblue;\n}\n.CreatePost__description {\n  outline: none;\n  border: none;\n  width: 100%;\n  border-bottom: 1px solid lightgrey;\n}\n.CreatePost__description:focus {\n  border-bottom: 1px solid cornflowerblue;\n}\n.CreatePost__banner-upload-container {\n  position: relative;\n  cursor: pointer;\n}\n.CreatePost__banner-upload-container .CreatePost__banner-button {\n  width: 100px;\n  border-radius: 4px;\n  border: none;\n  outline: none;\n  background-color: #4f92ff;\n  color: white;\n  padding: 4px;\n  height: 32px;\n}\n.CreatePost__banner-upload-container .CreatePost__banner-input {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 32px;\n  width: 100px;\n  border-radius: 4px;\n  opacity: 0;\n  cursor: pointer;\n}\n.CreatePost__previewed-banner {\n  width: 100px;\n}\n.CreatePost__previewed-banner-container {\n  position: relative;\n}\n.CreatePost__previewed-banner-container .CreatePost__remove-banner-button {\n  position: absolute;\n  color: white;\n  cursor: pointer;\n  right: 4px;\n}\n.CreatePost__section {\n  border-bottom: 1px #c6c6c6 solid;\n  padding: 8px 0;\n  margin: 8px 0;\n}\n\nbody {\n  margin: 0;\n}", ""]);
 
 // exports
 
@@ -76237,47 +76237,47 @@ function CreatePost(_ref) {
 
   _objectDestructuringEmpty(_ref);
 
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState({
-    title: "Haha",
-    description: "Haha",
-    banner: "",
-    sections: [{
-      title: "First section",
-      description: "First desc",
-      order: 1
-    }, {
-      title: "Second section",
-      description: "Second desc",
-      order: 2
-    }]
-  }),
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState({}),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       form = _React$useState2[0],
-      setForm = _React$useState2[1];
+      setForm = _React$useState2[1]; // TODO : Create an effect [form.banner] pour mettre le tableau des preview à jour à chaque modification d'images
+
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "CreatePost"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Cr\xE9ez votre propre article"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    action: ""
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Atelier cr\xE9ation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     value: form.title,
     onChange: function onChange(event) {
       updateForm(event.target.value, 'title');
     },
     type: "text",
-    placeholder: "Titre"
+    placeholder: "Titre de l'article",
+    className: "CreatePost__title"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     value: form.description,
     onChange: function onChange(event) {
       updateForm(event.target.value, 'description');
     },
     type: "text",
-    placeholder: "Description"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Bani\xE8re"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    placeholder: "Description",
+    className: "CreatePost__description"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "CreatePost__banner-upload-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "CreatePost__banner-button"
+  }, "Bani\xE8re"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     type: "file",
-    onChange: function onChange(event) {
-      updateForm(event.target.files[0], 'banner');
-    }
+    className: "CreatePost__banner-input",
+    onChange: addBanner
+  })), form.banner && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "CreatePost__previewed-banner-container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "CreatePost__remove-banner-button",
+    onClick: removeBanner
+  }, "x"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    className: "CreatePost__previewed-banner",
+    src: URL.createObjectURL(form.banner),
+    alt: form.title
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: function onClick(event) {
       return addSection(event);
@@ -76285,7 +76285,6 @@ function CreatePost(_ref) {
   }, "Cr\xE9er nouvelle section")), (_form$sections = form.sections) === null || _form$sections === void 0 ? void 0 : _form$sections.map(function (section) {
     var _section$images;
 
-    console.log(section);
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "CreatePost__section"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Titre"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -76333,7 +76332,7 @@ function CreatePost(_ref) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, section.title, " : ", section.description, " : ", section.order);
       });
     } else if (key !== 'banner') {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, key, " : ", value);
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, value);
     }
   })));
   /**
@@ -76371,6 +76370,25 @@ function CreatePost(_ref) {
       images: []
     });
     updateForm(sectionArray, 'sections');
+  }
+  /**
+   * Create a local url to display preview image banner
+   * And update the form
+   * @param event
+   */
+
+
+  function addBanner(event) {
+    URL.createObjectURL(event.target.files[0]);
+    updateForm(event.target.files[0], 'banner');
+  }
+  /**
+   * Removes the given banner
+   */
+
+
+  function removeBanner() {
+    updateForm(null, "banner");
   }
   /**
    * Add an image spot to a section

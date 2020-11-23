@@ -3,50 +3,58 @@ import server from "../../server";
 
 export default function CreatePost({}) {
 
-  const [form, setForm] = React.useState({
-    title: "Haha",
-    description: "Haha",
-    banner: "",
-    sections: [
-      {
-        title: "First section",
-        description: "First desc",
-        order: 1,
-      },
-      {
-        title: "Second section",
-        description: "Second desc",
-        order: 2,
-      }
-    ]
-  });
+  const [form, setForm] = React.useState({});
+
+  // TODO : Create an effect [form.banner] pour mettre le tableau des preview à jour à chaque modification d'images
 
   return (
     <div className="CreatePost">
-      <h1>Créez votre propre article</h1>
-      <form action="">
+      <h1>Atelier création</h1>
+      <form>
         <p>
-          <input value={form.title} onChange={(event) => {
-            updateForm(event.target.value, 'title')
-          }} type="text" placeholder="Titre"/>
+          <input
+            value={form.title}
+            onChange={(event) => {
+              updateForm(event.target.value, 'title')
+            }}
+            type="text"
+            placeholder="Titre de l'article"
+            className="CreatePost__title"
+          />
         </p>
         <p>
-          <input value={form.description} onChange={(event) => {
-            updateForm(event.target.value, 'description')
-          }} type="text" placeholder="Description"/>
+          <input
+            value={form.description}
+            onChange={(event) => {
+              updateForm(event.target.value, 'description')
+            }}
+            type="text"
+            placeholder="Description"
+            className="CreatePost__description"
+          />
         </p>
-        <p>
-          <label>Banière</label>
-          <input type="file" onChange={(event) => {
-            updateForm(event.target.files[0], 'banner')
-          }}/>
+        <p className="CreatePost__banner-upload-container">
+          <button className="CreatePost__banner-button">Banière</button>
+          <input
+            type="file"
+            className="CreatePost__banner-input"
+            onChange={addBanner}
+          />
         </p>
+        {form.banner && (
+          <span className="CreatePost__previewed-banner-container">
+            <span className="CreatePost__remove-banner-button" onClick={removeBanner}>x</span>
+            <img
+              className="CreatePost__previewed-banner"
+              src={URL.createObjectURL(form.banner)}
+              alt={form.title}
+            />
+          </span>
+        )}
         <p>
           <button onClick={(event) => addSection(event)}>Créer nouvelle section</button>
         </p>
         {form.sections?.map(section => {
-
-          console.log(section);
           return (
             <div className="CreatePost__section">
               <p>
@@ -85,7 +93,6 @@ export default function CreatePost({}) {
                   }}/>
                 </p>
               ))}
-
               <button onClick={(event) => addImageToSection(section.order, event)}>Ajouter une image</button>
             </div>
           )
@@ -99,7 +106,7 @@ export default function CreatePost({}) {
             return form.sections.map(section => <p>{section.title} : {section.description} : {section.order}</p>)
           } else if (key !== 'banner') {
             return (
-              <p>{key} : {value}</p>
+              <p>{value}</p>
             )
           }
         })}
@@ -134,6 +141,23 @@ export default function CreatePost({}) {
       images: [],
     });
     updateForm(sectionArray, 'sections');
+  }
+
+  /**
+   * Create a local url to display preview image banner
+   * And update the form
+   * @param event
+   */
+  function addBanner(event) {
+    URL.createObjectURL(event.target.files[0]);
+    updateForm(event.target.files[0], 'banner')
+  }
+
+  /**
+   * Removes the given banner
+   */
+  function removeBanner() {
+    updateForm(null, "banner");
   }
 
   /**

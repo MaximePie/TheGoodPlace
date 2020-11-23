@@ -1,4 +1,71 @@
 .CreatePost {
+
+  &__title {
+    outline: none;
+    border: none;
+    font-size: 3em;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+
+    &:focus {
+      border-bottom: 1px solid cornflowerblue;
+    }
+  }
+
+  &__description {
+    outline: none;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+
+    &:focus {
+      border-bottom: 1px solid cornflowerblue;
+    }
+  }
+
+  &__banner-upload-container {
+    position: relative;
+
+    cursor: pointer;
+
+    .CreatePost__banner-button {
+      width: 100px;
+      border-radius: 4px;
+      border: none;
+      outline: none;
+      background-color: #4f92ff;
+      color: white;
+      padding: 4px;
+      height: 32px;
+    }
+
+    .CreatePost__banner-input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 32px;
+      width: 100px;
+      border-radius: 4px;
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+
+  &__previewed-banner {
+    width: 100px;
+  }
+
+  &__previewed-banner-container {
+    position: relative;
+
+    .CreatePost__remove-banner-button {
+      position: absolute;
+      color: white;
+      cursor: pointer;
+      right: 4px;
+    }
+  }
+
   &__section {
     border-bottom: 1px #c6c6c6 solid;
     padding: 8px 0;
