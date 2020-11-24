@@ -1,65 +1,68 @@
 import React from 'react';
 import server from "../../server";
 
+import UploadButton from "../atoms/UploadButton"
+
 export default function CreatePost({}) {
 
   const [form, setForm] = React.useState({});
-
-  // TODO : Create an effect [form.banner] pour mettre le tableau des preview à jour à chaque modification d'images
 
   return (
     <div className="CreatePost">
       <h1>Atelier création</h1>
       <form>
-        <p>
-          <input
-            value={form.title}
-            onChange={(event) => {
-              updateForm(event.target.value, 'title')
-            }}
-            type="text"
-            placeholder="Titre de l'article"
-            className="CreatePost__title"
-          />
-        </p>
-        <p>
-          <input
-            value={form.description}
-            onChange={(event) => {
-              updateForm(event.target.value, 'description')
-            }}
-            type="text"
-            placeholder="Description"
-            className="CreatePost__description"
-          />
-        </p>
-        <p className="CreatePost__banner-upload-container">
-          <button className="CreatePost__banner-button">Banière</button>
-          <input
-            type="file"
-            className="CreatePost__banner-input"
-            onChange={addBanner}
-          />
-        </p>
-        {form.banner && (
-          <span className="CreatePost__previewed-banner-container">
-            <span className="CreatePost__remove-banner-button" onClick={removeBanner}>x</span>
-            <img
-              className="CreatePost__previewed-banner"
-              src={URL.createObjectURL(form.banner)}
-              alt={form.title}
+        <div className="CreatePost__head">
+          <p>
+            <input
+              value={form.title}
+              onChange={(event) => {
+                updateForm(event.target.value, 'title')
+              }}
+              type="text"
+              placeholder="Titre de l'article"
+              className="CreatePost__title"
             />
-          </span>
-        )}
+          </p>
+          <p>
+            <input
+              value={form.description}
+              onChange={(event) => {
+                updateForm(event.target.value, 'description')
+              }}
+              type="text"
+              placeholder="Description"
+              className="CreatePost__description"
+            />
+          </p>
+          <UploadButton
+            onChange={addBanner}
+            text="Banière"
+          />
+          {form.banner && (
+            <span className="CreatePost__previewed-banner-container">
+              <span className="CreatePost__remove-banner-button" onClick={removeBanner}>x</span>
+              <img
+                className="CreatePost__previewed-banner"
+                src={URL.createObjectURL(form.banner)}
+                alt={form.title}
+              />
+            </span>
+          )}
+        </div>
         <p>
-          <button onClick={(event) => addSection(event)}>Créer nouvelle section</button>
+          <button
+            className="CreatePost__create-section-button"
+            onClick={(event) => addSection(event)}
+          >
+            <i className="CreatePost__create-section-button-icon fas fa-plus"/>
+          </button>
         </p>
         {form.sections?.map(section => {
           return (
-            <div className="CreatePost__section">
+            <div className="CreatePost__section" key={`section-${section.order}`}>
               <p>
-                <label>Titre</label>
                 <input
+                  className="CreatePost__section-title"
                   type="text"
                   value={section.title}
                   onChange={(event) => updateSection('title', event.target.value, section.order)}
@@ -67,33 +70,45 @@ export default function CreatePost({}) {
                 />
               </p>
               <p>
-                <label>Description</label>
                 <input
+                  className="CreatePost__section-description"
                   type="text"
                   value={section.description}
                   onChange={(event) => updateSection('description', event.target.value, section.order)}
                   placeholder={`Description de la section ${section.order}`}
                 />
               </p>
-              <p>
-                <label>Ordre</label>
-                <input
-                  type="text"
-                  value={section.order}
-                  onChange={(event) => updateSection('order', event.target.value, section.order)}
-                  placeholder={`Ordre de la section ${section.order}`}
+              <div className="CreatePost__order-container">
+                <button
+                  onClick={(event) => {
+                    event.preventDefault();
+                    updateSection('order', section.order + 1, section.order)
+                  }}
+                >
+                  <i className="fas fa-caret-up"/>
+                </button>
+                <button onClick={(event) => {
+                  event.preventDefault();
+                  updateSection('order', section.order - 1, section.order)
+                }}
+                >
+                  <i className="fas fa-caret-down"/>
+                </button>
+                <i
+                  className="fas fa-images CreatePost__add-image"
+                  onClick={(event) => addImageToSection(section.order, event)}
                 />
-              </p>
+              </div>
 
               {section.images?.map((image, index) => (
-                <p>
-                  <label>Image</label>
-                  <input type="file" onChange={(event) => {
+                <UploadButton
+                  onChange={(event) => {
                     updateImages(section.order, index, event.target.files[0])
-                  }}/>
-                </p>
+                  }}
+                  text={`Image ${index + 1}`}
+                  key={`image-${section.order}.${index}`}
+                />
               ))}
-              <button onClick={(event) => addImageToSection(section.order, event)}>Ajouter une image</button>
             </div>
           )
         })}
@@ -135,8 +150,8 @@ export default function CreatePost({}) {
       order = ordersList.reduce((accumulator, currentValue) => Math.max(accumulator, currentValue)) + 1;
     }
     sectionArray.push({
-      title: 'section',
-      description: 'description',
+      title: '',
+      description: '',
       order: order || 1,
       images: [],
     });
@@ -185,8 +200,10 @@ export default function CreatePost({}) {
    * Updates the given section with a new value
    */
   function updateSection(field, newValue, sectionOrder) {
+    const initialSection = form.sections.find(section => section.order === newValue);
 
-    // Set the current section value
+
+    // Get the current section value
     const currentSection = form.sections.find(section => section.order === sectionOrder);
 
     // Create the new current Section
@@ -198,6 +215,17 @@ export default function CreatePost({}) {
 
     let updatedSectionsArray = [...form.sections];
     updatedSectionsArray[indexOfCurrentSection] = updatedSection;
+
+    if (field === 'order') {
+      // If no section is found at this order, return, because it is already the extreme one.
+      if (!initialSection || newValue < 0) {
+        return
+      }
+
+      const indexOfInitialSection = form.sections.indexOf(initialSection);
+      updatedSectionsArray[indexOfInitialSection] = {...initialSection, order: sectionOrder};
+    }
+
     updateForm(updatedSectionsArray, 'sections');
   }
 
@@ -206,7 +234,7 @@ export default function CreatePost({}) {
    */
   function updateImages(sectionOrder, imageIndex, file) {
     // Get the current section
-    const currentSection = form.sections.find(section => section.order === sectionOrder);
+    const currentSection = findSection(sectionOrder);
 
     // Get the current image array
     let imagesArray = [...currentSection.images];
@@ -229,8 +257,6 @@ export default function CreatePost({}) {
       'sections': form.sections,
     }).then((response) => {
       const post = response.data.post;
-
-      console.log(post);
       post.sections?.forEach(section => {
 
         // Find the images for the corresponding section
@@ -239,7 +265,8 @@ export default function CreatePost({}) {
         sectionImages.images?.forEach(image => {
           createImage(image, section.title, section.id, 'sectionImage');
         });
-      })
+      });
+
       if (form.banner) {
         createImage(form.banner, form.title, post.id, 'banner');
       }
@@ -259,5 +286,46 @@ export default function CreatePost({}) {
     server.post('post/image', data).then((response) => {
       setForm({});
     });
+
   }
+
+  /**
+   * Remove image preview display from section
+   */
+  function removePreviewImageFromSection(imageIndex, sectionOrder) {
+    // Find the section
+    const currentSection = {...findSection(sectionOrder)};
+
+    // Find the image from index
+    const currentImages = [...currentSection.images];
+    currentImages[imageIndex] = null;
+
+    // Update the section
+    updateSection('images', currentImages, sectionOrder);
+  }
+
+  /**
+   * Little helper to find a section in a easier way
+   */
+  function findSection(sectionOrder) {
+    return form.sections.find(section => section.order === sectionOrder);
+  }
+
+  //
+  // /**
+  //  * Returns an array of the sections sorted by their order
+  //  * Doe
+  //  */
+  // function sortedFormSectionsByOrder() {
+  //   const sortedSections = form.sections?.sort((a, b) => {
+  //     if (a.order < b.order) {
+  //       return -1;
+  //     }
+  //     else {
+  //       return 1;
+  //     }
+  //   });
+  //
+  //   return sortedSections || []
+  // }
 }

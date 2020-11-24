@@ -23,32 +23,18 @@
     }
   }
 
-  &__banner-upload-container {
-    position: relative;
+  &__head {
+    box-shadow: $elevated;
+    padding: 8px;
+    border-radius: 8px;
+  }
 
+  &__create-section-button {
+    background-color: white;
+    border: none;
+    outline: none;
     cursor: pointer;
-
-    .CreatePost__banner-button {
-      width: 100px;
-      border-radius: 4px;
-      border: none;
-      outline: none;
-      background-color: #4f92ff;
-      color: white;
-      padding: 4px;
-      height: 32px;
-    }
-
-    .CreatePost__banner-input {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 32px;
-      width: 100px;
-      border-radius: 4px;
-      opacity: 0;
-      cursor: pointer;
-    }
+    border-radius: 400px;
   }
 
   &__previewed-banner {
@@ -67,8 +53,64 @@
   }
 
   &__section {
-    border-bottom: 1px #c6c6c6 solid;
-    padding: 8px 0;
-    margin: 8px 0;
+    margin: 24px 0;
+    padding: 8px;
+    position: relative;
+    box-shadow: $elevated;
+    border-radius: 8px;
+
+
+    .CreatePost__order-container {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 0;
+      left: -30px;
+
+      button {
+        outline: none;
+        border: none;
+        background-color: white;
+        cursor: pointer;
+        color: grey;
+        transition: color 250ms ease;
+
+        &:hover {
+          color: lightgrey;
+          transition: color 250ms ease;
+        }
+
+        i {
+          font-size: 24px;
+        }
+      }
+
+      .CreatePost__add-image {
+        padding: 4px;
+      }
+    }
+
+    &-title {
+      outline: none;
+      border: none;
+      font-size: 2em;
+      width: 100%;
+      border-bottom: 1px solid lightgrey;
+
+      &:focus {
+        border-bottom: 1px solid cornflowerblue;
+      }
+    }
+
+    &-description {
+      outline: none;
+      border: none;
+      width: 100%;
+      border-bottom: 1px solid lightgrey;
+
+      &:focus {
+        border-bottom: 1px solid cornflowerblue;
+      }
+    }
   }
 }

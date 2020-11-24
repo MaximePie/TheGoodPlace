@@ -1,0 +1,28 @@
+
+.UploadButton {
+  position: relative;
+
+  cursor: pointer;
+
+  &__banner-button {
+    width: 100px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: #4f92ff;
+    color: white;
+    padding: 4px;
+    height: 32px;
+  }
+
+  &__banner-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 32px;
+    width: 100px;
+    border-radius: 4px;
+    opacity: 0;
+    cursor: pointer;
+  }
+}

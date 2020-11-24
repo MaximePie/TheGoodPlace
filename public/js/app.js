@@ -6718,7 +6718,7 @@ exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Nun
 exports.i(__webpack_require__(/*! -!../../node_modules/css-loader!../../node_modules/@fortawesome/fontawesome-free/css/all.min.css */ "./node_modules/css-loader/index.js!./node_modules/@fortawesome/fontawesome-free/css/all.min.css"), "");
 
 // module
-exports.push([module.i, ".Home {\n  display: grid;\n  height: 100vh;\n}\n.Home__body {\n  margin: 40px auto 0;\n  min-width: 1200px;\n}\n\n.Post {\n  display: grid;\n  grid-template-rows: 400px 80px 1fr;\n  grid-row-gap: 24px;\n  width: 1200px;\n}\n.Post__title {\n  text-align: center;\n}\n.Post__banner-container {\n  text-align: center;\n  width: 100%;\n  position: relative;\n  overflow: hidden;\n}\n.Post__banner {\n  height: 250%;\n  max-width: 100%;\n  position: absolute;\n  top: -80%;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.Post__section-illustration-container--is-displayed {\n  width: 100vw;\n  height: 100vh;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.Post__section-illustration-background {\n  display: block;\n  background-color: rgba(255, 255, 255, 0.53);\n  height: 100vh;\n  width: 100vw;\n}\n.Post__section-illustration {\n  display: block;\n  margin: 16px 0;\n  width: 1200px;\n  cursor: pointer;\n}\n.Post__section-illustration--is-displayed {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 600px;\n  transform: translate(-50%, -50%);\n}\n\n.Posts {\n  width: 1200px;\n}\n.Posts__header {\n  text-align: center;\n}\n.Posts__post {\n  display: grid;\n  grid-template-columns: 250px 1fr;\n  grid-column-gap: 8px;\n  cursor: pointer;\n  margin: 24px 0;\n  border-radius: 4px;\n  max-height: 200px;\n  overflow: hidden;\n  transition: box-shadow 250ms ease;\n}\n.Posts__post:hover {\n  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\n  transition: box-shadow 250ms ease;\n}\n.Posts__post-illustration {\n  width: 100%;\n}\n.Posts__post-title {\n  margin: 0 0 8px;\n}\n.Posts__post-description {\n  margin: 8px 0;\n}\n.Posts__post-link {\n  all: unset;\n}\n.Posts__post-link:visited {\n  all: unset;\n  color: black;\n}\n\n.Navbar {\n  margin-top: 1em;\n  position: fixed;\n  top: 0;\n}\n.Navbar__link {\n  margin: 1em;\n}\n\n.CreatePost__title {\n  outline: none;\n  border: none;\n  font-size: 3em;\n  width: 100%;\n  border-bottom: 1px solid lightgrey;\n}\n.CreatePost__title:focus {\n  border-bottom: 1px solid cornflowerblue;\n}\n.CreatePost__description {\n  outline: none;\n  border: none;\n  width: 100%;\n  border-bottom: 1px solid lightgrey;\n}\n.CreatePost__description:focus {\n  border-bottom: 1px solid cornflowerblue;\n}\n.CreatePost__banner-upload-container {\n  position: relative;\n  cursor: pointer;\n}\n.CreatePost__banner-upload-container .CreatePost__banner-button {\n  width: 100px;\n  border-radius: 4px;\n  border: none;\n  outline: none;\n  background-color: #4f92ff;\n  color: white;\n  padding: 4px;\n  height: 32px;\n}\n.CreatePost__banner-upload-container .CreatePost__banner-input {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 32px;\n  width: 100px;\n  border-radius: 4px;\n  opacity: 0;\n  cursor: pointer;\n}\n.CreatePost__previewed-banner {\n  width: 100px;\n}\n.CreatePost__previewed-banner-container {\n  position: relative;\n}\n.CreatePost__previewed-banner-container .CreatePost__remove-banner-button {\n  position: absolute;\n  color: white;\n  cursor: pointer;\n  right: 4px;\n}\n.CreatePost__section {\n  border-bottom: 1px #c6c6c6 solid;\n  padding: 8px 0;\n  margin: 8px 0;\n}\n\nbody {\n  margin: 0;\n}", ""]);
+exports.push([module.i, ".Home {\n  display: grid;\n  height: 100vh;\n}\n.Home__body {\n  margin: 40px auto 0;\n  min-width: 1200px;\n}\n\n.Post {\n  display: grid;\n  grid-template-rows: 400px 80px 1fr;\n  grid-row-gap: 24px;\n  width: 1200px;\n}\n.Post__title {\n  text-align: center;\n}\n.Post__banner-container {\n  text-align: center;\n  width: 100%;\n  position: relative;\n  overflow: hidden;\n}\n.Post__banner {\n  height: 250%;\n  max-width: 100%;\n  position: absolute;\n  top: -80%;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.Post__section-illustration-container--is-displayed {\n  width: 100vw;\n  height: 100vh;\n  position: absolute;\n  top: 0;\n  left: 0;\n}\n.Post__section-illustration-background {\n  display: block;\n  background-color: rgba(255, 255, 255, 0.53);\n  height: 100vh;\n  width: 100vw;\n}\n.Post__section-illustration {\n  display: block;\n  margin: 16px 0;\n  width: 1200px;\n  cursor: pointer;\n}\n.Post__section-illustration--is-displayed {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 600px;\n  transform: translate(-50%, -50%);\n}\n\n.Posts {\n  width: 1200px;\n}\n.Posts__header {\n  text-align: center;\n}\n.Posts__post {\n  display: grid;\n  grid-template-columns: 250px 1fr;\n  grid-column-gap: 8px;\n  cursor: pointer;\n  margin: 24px 0;\n  border-radius: 4px;\n  max-height: 200px;\n  overflow: hidden;\n  transition: box-shadow 250ms ease;\n}\n.Posts__post:hover {\n  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\n  transition: box-shadow 250ms ease;\n}\n.Posts__post-illustration {\n  width: 100%;\n}\n.Posts__post-title {\n  margin: 0 0 8px;\n}\n.Posts__post-description {\n  margin: 8px 0;\n}\n.Posts__post-link {\n  all: unset;\n}\n.Posts__post-link:visited {\n  all: unset;\n  color: black;\n}\n\n.Navbar {\n  margin-top: 1em;\n  position: fixed;\n  top: 0;\n}\n.Navbar__link {\n  margin: 1em;\n}\n\n.CreatePost__title {\n  outline: none;\n  border: none;\n  font-size: 3em;\n  width: 100%;\n  border-bottom: 1px solid lightgrey;\n}\n.CreatePost__title:focus {\n  border-bottom: 1px solid cornflowerblue;\n}\n.CreatePost__description {\n  outline: none;\n  border: none;\n  width: 100%;\n  border-bottom: 1px solid lightgrey;\n}\n.CreatePost__description:focus {\n  border-bottom: 1px solid cornflowerblue;\n}\n.CreatePost__head {\n  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\n  padding: 8px;\n  border-radius: 8px;\n}\n.CreatePost__create-section-button {\n  background-color: white;\n  border: none;\n  outline: none;\n  cursor: pointer;\n  border-radius: 400px;\n}\n.CreatePost__previewed-banner {\n  width: 100px;\n}\n.CreatePost__previewed-banner-container {\n  position: relative;\n}\n.CreatePost__previewed-banner-container .CreatePost__remove-banner-button {\n  position: absolute;\n  color: white;\n  cursor: pointer;\n  right: 4px;\n}\n.CreatePost__section {\n  margin: 24px 0;\n  padding: 8px;\n  position: relative;\n  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);\n  border-radius: 8px;\n}\n.CreatePost__section .CreatePost__order-container {\n  position: absolute;\n  display: flex;\n  flex-direction: column;\n  top: 0;\n  left: -30px;\n}\n.CreatePost__section .CreatePost__order-container button {\n  outline: none;\n  border: none;\n  background-color: white;\n  cursor: pointer;\n  color: grey;\n  transition: color 250ms ease;\n}\n.CreatePost__section .CreatePost__order-container button:hover {\n  color: lightgrey;\n  transition: color 250ms ease;\n}\n.CreatePost__section .CreatePost__order-container button i {\n  font-size: 24px;\n}\n.CreatePost__section .CreatePost__order-container .CreatePost__add-image {\n  padding: 4px;\n}\n.CreatePost__section-title {\n  outline: none;\n  border: none;\n  font-size: 2em;\n  width: 100%;\n  border-bottom: 1px solid lightgrey;\n}\n.CreatePost__section-title:focus {\n  border-bottom: 1px solid cornflowerblue;\n}\n.CreatePost__section-description {\n  outline: none;\n  border: none;\n  width: 100%;\n  border-bottom: 1px solid lightgrey;\n}\n.CreatePost__section-description:focus {\n  border-bottom: 1px solid cornflowerblue;\n}\n\n.UploadButton {\n  position: relative;\n  cursor: pointer;\n}\n.UploadButton__banner-button {\n  width: 100px;\n  border-radius: 4px;\n  border: none;\n  outline: none;\n  background-color: #4f92ff;\n  color: white;\n  padding: 4px;\n  height: 32px;\n}\n.UploadButton__banner-input {\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 32px;\n  width: 100px;\n  border-radius: 4px;\n  opacity: 0;\n  cursor: pointer;\n}\n\nbody {\n  margin: 0;\n}", ""]);
 
 // exports
 
@@ -76157,6 +76157,35 @@ if (document.getElementById('root')) {
 
 /***/ }),
 
+/***/ "./resources/js/components/atoms/UploadButton.jsx":
+/*!********************************************************!*\
+  !*** ./resources/js/components/atoms/UploadButton.jsx ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return UploadButton; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+function UploadButton(_ref) {
+  var onChange = _ref.onChange,
+      text = _ref.text;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "UploadButton"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "UploadButton__banner-button"
+  }, text), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "file",
+    className: "UploadButton__banner-input",
+    onChange: onChange
+  }));
+}
+
+/***/ }),
+
 /***/ "./resources/js/components/molecules/Navbar.jsx":
 /*!******************************************************!*\
   !*** ./resources/js/components/molecules/Navbar.jsx ***!
@@ -76202,6 +76231,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _server__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../server */ "./resources/js/server.js");
+/* harmony import */ var _atoms_UploadButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../atoms/UploadButton */ "./resources/js/components/atoms/UploadButton.jsx");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -76232,6 +76262,7 @@ function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("
 
 
 
+
 function CreatePost(_ref) {
   var _form$sections;
 
@@ -76240,12 +76271,13 @@ function CreatePost(_ref) {
   var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState({}),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       form = _React$useState2[0],
-      setForm = _React$useState2[1]; // TODO : Create an effect [form.banner] pour mettre le tableau des preview à jour à chaque modification d'images
-
+      setForm = _React$useState2[1];
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "CreatePost"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Atelier cr\xE9ation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Atelier cr\xE9ation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "CreatePost__head"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
     value: form.title,
     onChange: function onChange(event) {
       updateForm(event.target.value, 'title');
@@ -76261,15 +76293,10 @@ function CreatePost(_ref) {
     type: "text",
     placeholder: "Description",
     className: "CreatePost__description"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "CreatePost__banner-upload-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "CreatePost__banner-button"
-  }, "Bani\xE8re"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    type: "file",
-    className: "CreatePost__banner-input",
-    onChange: addBanner
-  })), form.banner && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_atoms_UploadButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    onChange: addBanner,
+    text: "Bani\xE8re"
+  }), form.banner && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "CreatePost__previewed-banner-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "CreatePost__remove-banner-button",
@@ -76278,48 +76305,65 @@ function CreatePost(_ref) {
     className: "CreatePost__previewed-banner",
     src: URL.createObjectURL(form.banner),
     alt: form.title
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+  }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "CreatePost__create-section-button",
     onClick: function onClick(event) {
       return addSection(event);
     }
-  }, "Cr\xE9er nouvelle section")), (_form$sections = form.sections) === null || _form$sections === void 0 ? void 0 : _form$sections.map(function (section) {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "CreatePost__create-section-button-icon fas fa-plus"
+  }))), (_form$sections = form.sections) === null || _form$sections === void 0 ? void 0 : _form$sections.map(function (section) {
     var _section$images;
 
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      className: "CreatePost__section"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Titre"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      className: "CreatePost__section",
+      key: "section-".concat(section.order)
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      className: "CreatePost__section-title",
       type: "text",
       value: section.title,
       onChange: function onChange(event) {
         return updateSection('title', event.target.value, section.order);
       },
       placeholder: "Titre de la section ".concat(section.order)
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Description"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      className: "CreatePost__section-description",
       type: "text",
       value: section.description,
       onChange: function onChange(event) {
         return updateSection('description', event.target.value, section.order);
       },
       placeholder: "Description de la section ".concat(section.order)
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Ordre"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-      type: "text",
-      value: section.order,
-      onChange: function onChange(event) {
-        return updateSection('order', event.target.value, section.order);
-      },
-      placeholder: "Ordre de la section ".concat(section.order)
-    })), (_section$images = section.images) === null || _section$images === void 0 ? void 0 : _section$images.map(function (image, index) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Image"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "file",
-        onChange: function onChange(event) {
-          updateImages(section.order, index, event.target.files[0]);
-        }
-      }));
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "CreatePost__order-container"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: function onClick(event) {
+        event.preventDefault();
+        updateSection('order', section.order + 1, section.order);
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-caret-up"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: function onClick(event) {
+        event.preventDefault();
+        updateSection('order', section.order - 1, section.order);
+      }
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-caret-down"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      className: "fas fa-images CreatePost__add-image",
       onClick: function onClick(event) {
         return addImageToSection(section.order, event);
       }
-    }, "Ajouter une image"));
+    })), (_section$images = section.images) === null || _section$images === void 0 ? void 0 : _section$images.map(function (image, index) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_atoms_UploadButton__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        onChange: function onChange(event) {
+          updateImages(section.order, index, event.target.files[0]);
+        },
+        text: "Image ".concat(index + 1),
+        key: "image-".concat(section.order, ".").concat(index)
+      });
+    }));
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: createPost
   }, "Cr\xE9er"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, Object.entries(form).map(function (_ref2) {
@@ -76364,8 +76408,8 @@ function CreatePost(_ref) {
     }
 
     sectionArray.push({
-      title: 'section',
-      description: 'description',
+      title: '',
+      description: '',
       order: order || 1,
       images: []
     });
@@ -76414,7 +76458,10 @@ function CreatePost(_ref) {
 
 
   function updateSection(field, newValue, sectionOrder) {
-    // Set the current section value
+    var initialSection = form.sections.find(function (section) {
+      return section.order === newValue;
+    }); // Get the current section value
+
     var currentSection = form.sections.find(function (section) {
       return section.order === sectionOrder;
     }); // Create the new current Section
@@ -76427,6 +76474,19 @@ function CreatePost(_ref) {
     var updatedSectionsArray = _toConsumableArray(form.sections);
 
     updatedSectionsArray[indexOfCurrentSection] = updatedSection;
+
+    if (field === 'order') {
+      // If no section is found at this order, return, because it is already the extreme one.
+      if (!initialSection || newValue < 0) {
+        return;
+      }
+
+      var indexOfInitialSection = form.sections.indexOf(initialSection);
+      updatedSectionsArray[indexOfInitialSection] = _objectSpread(_objectSpread({}, initialSection), {}, {
+        order: sectionOrder
+      });
+    }
+
     updateForm(updatedSectionsArray, 'sections');
   }
   /**
@@ -76436,9 +76496,7 @@ function CreatePost(_ref) {
 
   function updateImages(sectionOrder, imageIndex, file) {
     // Get the current section
-    var currentSection = form.sections.find(function (section) {
-      return section.order === sectionOrder;
-    }); // Get the current image array
+    var currentSection = findSection(sectionOrder); // Get the current image array
 
     var imagesArray = _toConsumableArray(currentSection.images); // Set the current image at given index
 
@@ -76461,7 +76519,6 @@ function CreatePost(_ref) {
       var _post$sections;
 
       var post = response.data.post;
-      console.log(post);
       (_post$sections = post.sections) === null || _post$sections === void 0 ? void 0 : _post$sections.forEach(function (section) {
         var _sectionImages$images;
 
@@ -76494,6 +76551,49 @@ function CreatePost(_ref) {
       setForm({});
     });
   }
+  /**
+   * Remove image preview display from section
+   */
+
+
+  function removePreviewImageFromSection(imageIndex, sectionOrder) {
+    // Find the section
+    var currentSection = _objectSpread({}, findSection(sectionOrder)); // Find the image from index
+
+
+    var currentImages = _toConsumableArray(currentSection.images);
+
+    currentImages[imageIndex] = null; // Update the section
+
+    updateSection('images', currentImages, sectionOrder);
+  }
+  /**
+   * Little helper to find a section in a easier way
+   */
+
+
+  function findSection(sectionOrder) {
+    return form.sections.find(function (section) {
+      return section.order === sectionOrder;
+    });
+  } //
+  // /**
+  //  * Returns an array of the sections sorted by their order
+  //  * Doe
+  //  */
+  // function sortedFormSectionsByOrder() {
+  //   const sortedSections = form.sections?.sort((a, b) => {
+  //     if (a.order < b.order) {
+  //       return -1;
+  //     }
+  //     else {
+  //       return 1;
+  //     }
+  //   });
+  //
+  //   return sortedSections || []
+  // }
+
 }
 
 /***/ }),
