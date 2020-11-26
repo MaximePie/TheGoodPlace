@@ -25,13 +25,10 @@ export default function Home() {
     <viewportContext.Provider value={isMobile}>
     <div className="Home">
       <BrowserRouter history={createBrowserHistory}>
-        <Navbar/>
         <div className="Home__body">
+          <Navbar/>
           <Switch>
-            <Route path='/' exact>
-              Home
-            </Route>
-            <Route path="/posts" exact>
+            <Route path="/" exact>
               <Posts/>
             </Route>
             <Route path="/createPost" exact>

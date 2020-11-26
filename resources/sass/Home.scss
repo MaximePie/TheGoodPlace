@@ -3,7 +3,10 @@
   height: 100vh;
 
   &__body {
-    margin: 40px auto 0;
+    margin: auto;
     min-width: 1200px;
+    display: grid;
+    grid-template-rows: 40px 1fr;
+    font-family: 'Arvo', sans-serif;
   }
 }
