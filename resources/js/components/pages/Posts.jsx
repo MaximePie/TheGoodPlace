@@ -22,9 +22,7 @@ export default function Posts({}) {
           </div>
         </Link>
       ))}
-      <div>
-        <Link to={'/createPost'}>Créer un article</Link>
-      </div>
+      <Link className="Posts__create-post-link" to={'/createPost'}><i className="fas fa-edit Posts__create-post-icon"/>Créer un article</Link>
     </div>
   );
 

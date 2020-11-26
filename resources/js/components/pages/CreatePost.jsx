@@ -50,13 +50,6 @@ export default function CreatePost({}) {
           )}
         </div>
         <p>
-          <button
-            className="CreatePost__create-section-button"
-            onClick={(event) => addSection(event)}
-          >
-            <i className="CreatePost__create-section-button-icon fas fa-plus"/>
-          </button>
-        </p>
         {form.sections?.map(section => {
           return (
             <div className="CreatePost__section" key={`section-${section.order}`}>
@@ -112,6 +105,13 @@ export default function CreatePost({}) {
             </div>
           )
         })}
+          <button
+            className="CreatePost__create-section-button"
+            onClick={(event) => addSection(event)}
+          >
+            <i className="CreatePost__create-section-button-icon fas fa-plus"/>
+          </button>
+        </p>
       </form>
       <button onClick={createPost}>Créer</button>
       <div>

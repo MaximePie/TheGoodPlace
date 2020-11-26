@@ -43,4 +43,33 @@
       }
     }
   }
+
+  &__create-post-link {
+    position: fixed;
+    bottom: 16px;
+
+    // (100vw - 1200px) / 2 = marginleft
+    // 1200px = bodywidth
+    // 156px = button width
+    left: calc((100vw - 1200px ) / 2 + 1200px - 156px);
+
+    width: 140px;
+    border-radius: 4px;
+    padding: 8px;
+    height: 32px;
+
+    border: none;
+    outline: none;
+    background-color: #4f92ff;
+    color: white;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__create-post-icon {
+    margin-right: 8px;
+  }
 }
